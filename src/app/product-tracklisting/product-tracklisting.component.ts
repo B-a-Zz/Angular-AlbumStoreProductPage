@@ -1,6 +1,7 @@
-import { ProductService } from './../product.service';
-import { Album } from './../album';
+import{ProductService} from '../product.service'
+import{Album} from '../album';
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs/observable/from';
 
 @Component({
   selector: 'app-product-tracklisting',

@@ -10,10 +10,10 @@ import { from } from 'rxjs/observable/from';
 })
 export class ProductTracklistingComponent implements OnInit {
   albumInfo:Album;
-  constructor(private _prductService:ProductService) { }
+  constructor( private _productService:ProductService) { }
 
   ngOnInit() {
-    this._prductService.getAlbum(1).subscribe(response => this.albumInfo = response);
+    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
   }
 
 }

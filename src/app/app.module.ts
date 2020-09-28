@@ -11,6 +11,11 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 import { from } from 'rxjs/observable/from';
 import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import {RouterModule, Routes} from '@angular/router'
+
+
+const appRoute:Routes =[{path:'Products', component: ProductListComponent},
+{path:'Product/:id', component: ProductPageComponent}]
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,8 @@ import { ProductListComponent } from './product-list/product-list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

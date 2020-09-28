@@ -1,5 +1,5 @@
-import { ProductService } from './../product.service';
-import { Product } from './../product';
+import { ProductService } from '../product.service';
+import { Product } from '../product';
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs/observable/from';
 @Component({
@@ -12,7 +12,7 @@ products:Product[];
   constructor( private  productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getProduct().subscribe(response => this.products= response)
+    this.productService.getProducts().subscribe(response => this.products= response)
   }
 
 }

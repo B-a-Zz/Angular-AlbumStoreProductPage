@@ -8,10 +8,11 @@ import { from } from 'rxjs/observable/from';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-product:Product[];
+products:Product[];
   constructor( private  productService: ProductService) { }
 
   ngOnInit() {
+    this.productService.getProduct().subscribe(response => this.products= response)
   }
 
 }
